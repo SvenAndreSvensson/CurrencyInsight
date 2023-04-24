@@ -58,7 +58,7 @@
 		265446DF29F3A3A0004AF0AB /* CurrencyConversionView-ViewData+filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446B929F3A3A0004AF0AB /* CurrencyConversionView-ViewData+filter.swift */; };
 		265446E029F3A3A0004AF0AB /* CurrencyConversionView-ViewData+swapBaseAndQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446BA29F3A3A0004AF0AB /* CurrencyConversionView-ViewData+swapBaseAndQuote.swift */; };
 		265446E129F3A3A0004AF0AB /* CurrencyConversionView-ViewData+map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446BB29F3A3A0004AF0AB /* CurrencyConversionView-ViewData+map.swift */; };
-		265446E229F3A3A0004AF0AB /* CurrencyConversionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446BC29F3A3A0004AF0AB /* CurrencyConversionViewData.swift */; };
+		265446E229F3A3A0004AF0AB /* CurrencyConversionView-ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446BC29F3A3A0004AF0AB /* CurrencyConversionView-ViewData.swift */; };
 		265446E629F3A3A0004AF0AB /* CurrencyConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446C029F3A3A0004AF0AB /* CurrencyConversionView.swift */; };
 		265446E729F3A3A0004AF0AB /* exr_all.json in Resources */ = {isa = PBXBuildFile; fileRef = 265446C229F3A3A0004AF0AB /* exr_all.json */; };
 		265446E829F3A3A0004AF0AB /* uriInLinkMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 265446C329F3A3A0004AF0AB /* uriInLinkMissing.json */; };
@@ -152,7 +152,7 @@
 		265446B929F3A3A0004AF0AB /* CurrencyConversionView-ViewData+filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionView-ViewData+filter.swift"; sourceTree = "<group>"; };
 		265446BA29F3A3A0004AF0AB /* CurrencyConversionView-ViewData+swapBaseAndQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionView-ViewData+swapBaseAndQuote.swift"; sourceTree = "<group>"; };
 		265446BB29F3A3A0004AF0AB /* CurrencyConversionView-ViewData+map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionView-ViewData+map.swift"; sourceTree = "<group>"; };
-		265446BC29F3A3A0004AF0AB /* CurrencyConversionViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionViewData.swift; sourceTree = "<group>"; };
+		265446BC29F3A3A0004AF0AB /* CurrencyConversionView-ViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionView-ViewData.swift"; sourceTree = "<group>"; };
 		265446C029F3A3A0004AF0AB /* CurrencyConversionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionView.swift; sourceTree = "<group>"; };
 		265446C229F3A3A0004AF0AB /* exr_all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exr_all.json; sourceTree = "<group>"; };
 		265446C329F3A3A0004AF0AB /* uriInLinkMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uriInLinkMissing.json; sourceTree = "<group>"; };
@@ -463,7 +463,7 @@
 				265446B229F3A3A0004AF0AB /* CurrencyConversionStateView.swift */,
 				265446B329F3A3A0004AF0AB /* CurrencyConversionStateView-ViewModel.swift */,
 				265446C029F3A3A0004AF0AB /* CurrencyConversionView.swift */,
-				265446BC29F3A3A0004AF0AB /* CurrencyConversionViewData.swift */,
+				265446BC29F3A3A0004AF0AB /* CurrencyConversionView-ViewData.swift */,
 				265446B629F3A3A0004AF0AB /* ViewData */,
 				265446FD29F3EB61004AF0AB /* Components */,
 				265446FC29F3EB2E004AF0AB /* Subviews */,
@@ -720,7 +720,7 @@
 				2654469729F3A2AF004AF0AB /* View+card.swift in Sources */,
 				265446D729F3A3A0004AF0AB /* UserDefaultsStorage.swift in Sources */,
 				2654467C29F3A210004AF0AB /* Backend.swift in Sources */,
-				265446E229F3A3A0004AF0AB /* CurrencyConversionViewData.swift in Sources */,
+				265446E229F3A3A0004AF0AB /* CurrencyConversionView-ViewData.swift in Sources */,
 				26BD409229F562B500702522 /* ErrorMessageView.swift in Sources */,
 				2654467729F3A210004AF0AB /* GetExchangeRatesRequest.swift in Sources */,
 				2654467929F3A210004AF0AB /* ApiConfiguration.swift in Sources */,
