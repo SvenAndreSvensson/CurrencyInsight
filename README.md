@@ -1,6 +1,6 @@
 # Currency Insight
 
-![Currency Insight Screenshot](ReadMe/Images/screenshot1.png)
+<img src="ReadMe/Images/screenshot1.png" alt="Currency Insight Screenshot" width="300">
 
 ## Overview
 Currency Insight is an iOS app that converts currencies. The app uses data from Norges Bank's open API for fetching exchange rates.
