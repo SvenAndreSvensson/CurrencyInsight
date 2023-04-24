@@ -31,7 +31,7 @@ Currency Insight is licensed under the [MIT license](https://opensource.org/lice
 - Fallbacks
 - Unit testing
 - Snapshot testing
-- Localisation
+- Localization
 - Logging
 - ++
 
