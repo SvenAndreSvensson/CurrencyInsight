@@ -28,7 +28,7 @@ Currency Insight is licensed under the [MIT license](https://opensource.org/lice
 - Norges Bank for providing the open API for fetching exchange rates.
 
 ## Roadmap / TODOs / 
-- Fallbacks, No thoughts is offered to fallbacks due to lack of time. 
+- Fallbacks
 - Unit testing
 - Snapshot testing
 - Localisation
