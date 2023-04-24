@@ -1,0 +1,36 @@
+# Xcode user-specific settings
+xcuserdata/
+
+# Xcode build products
+build/
+DerivedData/
+
+# Swift Package Manager build products
+.swiftpm/
+
+# Carthage build products
+Carthage/
+
+# CocoaPods build products
+Pods/
+
+# Other ignored files
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Ignored file patterns
+*.DS_Store
+*.swp
+*.bak
+*~
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Apple Double files
+._*

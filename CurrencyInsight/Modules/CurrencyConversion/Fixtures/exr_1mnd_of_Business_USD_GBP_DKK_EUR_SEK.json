@@ -1,0 +1,724 @@
+{
+    "meta": {
+        "id": "IREF460644",
+        "prepared": "2023-03-24T08:21:02",
+        "test": false,
+        "sender": {
+            "id": "NB"
+        },
+        "receiver": {
+            "id": "ANONYMOUS"
+        },
+        "links": [
+            {
+                "href": "data/all,EXR,latest/B.EUR+GBP+DKK+USD+SEK.NOK.SP/all?startPeriod=2023-02-23&endPeriod=2023-03-23&detail=full",
+                "rel": "self",
+                "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+            }
+        ]
+    },
+    "data": {
+        "dataSets": [
+            {
+                "links": [
+                    {
+                        "rel": "dataflow",
+                        "urn": "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=NB:EXR(1.0)",
+                        "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+                    }
+                ],
+                "action": "Information",
+                "series": {
+                    "0:0:0:0": {
+                        "attributes": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "147.18"
+                            ],
+                            "1": [
+                                "146.93"
+                            ],
+                            "2": [
+                                "147.31"
+                            ],
+                            "3": [
+                                "147.38"
+                            ],
+                            "4": [
+                                "148.28"
+                            ],
+                            "5": [
+                                "148.96"
+                            ],
+                            "6": [
+                                "148.65"
+                            ],
+                            "7": [
+                                "149.29"
+                            ],
+                            "8": [
+                                "150.4"
+                            ],
+                            "9": [
+                                "150.79"
+                            ],
+                            "10": [
+                                "151.46"
+                            ],
+                            "11": [
+                                "151.7"
+                            ],
+                            "12": [
+                                "152.99"
+                            ],
+                            "13": [
+                                "152.26"
+                            ],
+                            "14": [
+                                "152.33"
+                            ],
+                            "15": [
+                                "153.72"
+                            ],
+                            "16": [
+                                "153.42"
+                            ],
+                            "17": [
+                                "153.4"
+                            ],
+                            "18": [
+                                "151.92"
+                            ],
+                            "19": [
+                                "152.16"
+                            ],
+                            "20": [
+                                "151.5"
+                            ]
+                        }
+                    },
+                    "0:1:0:0": {
+                        "attributes": [
+                            1,
+                            0,
+                            1,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "10.9545"
+                            ],
+                            "1": [
+                                "10.937"
+                            ],
+                            "2": [
+                                "10.9635"
+                            ],
+                            "3": [
+                                "10.9713"
+                            ],
+                            "4": [
+                                "11.0365"
+                            ],
+                            "5": [
+                                "11.085"
+                            ],
+                            "6": [
+                                "11.061"
+                            ],
+                            "7": [
+                                "11.1109"
+                            ],
+                            "8": [
+                                "11.1935"
+                            ],
+                            "9": [
+                                "11.2205"
+                            ],
+                            "10": [
+                                "11.2715"
+                            ],
+                            "11": [
+                                "11.29"
+                            ],
+                            "12": [
+                                "11.3893"
+                            ],
+                            "13": [
+                                "11.335"
+                            ],
+                            "14": [
+                                "11.34"
+                            ],
+                            "15": [
+                                "11.4487"
+                            ],
+                            "16": [
+                                "11.4218"
+                            ],
+                            "17": [
+                                "11.421"
+                            ],
+                            "18": [
+                                "11.3125"
+                            ],
+                            "19": [
+                                "11.332"
+                            ],
+                            "20": [
+                                "11.284"
+                            ]
+                        }
+                    },
+                    "0:2:0:0": {
+                        "attributes": [
+                            1,
+                            0,
+                            1,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "12.4285"
+                            ],
+                            "1": [
+                                "12.3939"
+                            ],
+                            "2": [
+                                "12.4482"
+                            ],
+                            "3": [
+                                "12.5099"
+                            ],
+                            "4": [
+                                "12.4602"
+                            ],
+                            "5": [
+                                "12.4852"
+                            ],
+                            "6": [
+                                "12.4941"
+                            ],
+                            "7": [
+                                "12.5363"
+                            ],
+                            "8": [
+                                "12.5815"
+                            ],
+                            "9": [
+                                "12.5968"
+                            ],
+                            "10": [
+                                "12.6911"
+                            ],
+                            "11": [
+                                "12.792"
+                            ],
+                            "12": [
+                                "12.8882"
+                            ],
+                            "13": [
+                                "12.8728"
+                            ],
+                            "14": [
+                                "12.9982"
+                            ],
+                            "15": [
+                                "13.0366"
+                            ],
+                            "16": [
+                                "13.0553"
+                            ],
+                            "17": [
+                                "13.0436"
+                            ],
+                            "18": [
+                                "12.8503"
+                            ],
+                            "19": [
+                                "12.8883"
+                            ],
+                            "20": [
+                                "12.747"
+                            ]
+                        }
+                    },
+                    "0:3:0:0": {
+                        "attributes": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "99.06"
+                            ],
+                            "1": [
+                                "99.4"
+                            ],
+                            "2": [
+                                "99.13"
+                            ],
+                            "3": [
+                                "99.04"
+                            ],
+                            "4": [
+                                "99.43"
+                            ],
+                            "5": [
+                                "99.55"
+                            ],
+                            "6": [
+                                "99.26"
+                            ],
+                            "7": [
+                                "99.57"
+                            ],
+                            "8": [
+                                "99.69"
+                            ],
+                            "9": [
+                                "99.44"
+                            ],
+                            "10": [
+                                "99.43"
+                            ],
+                            "11": [
+                                "99.11"
+                            ],
+                            "12": [
+                                "99.57"
+                            ],
+                            "13": [
+                                "100.42"
+                            ],
+                            "14": [
+                                "101.23"
+                            ],
+                            "15": [
+                                "102.42"
+                            ],
+                            "16": [
+                                "101.98"
+                            ],
+                            "17": [
+                                "102.37"
+                            ],
+                            "18": [
+                                "101.92"
+                            ],
+                            "19": [
+                                "101.6"
+                            ],
+                            "20": [
+                                "100.55"
+                            ]
+                        }
+                    },
+                    "0:4:0:0": {
+                        "attributes": [
+                            1,
+                            0,
+                            1,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "10.3189"
+                            ],
+                            "1": [
+                                "10.3472"
+                            ],
+                            "2": [
+                                "10.388"
+                            ],
+                            "3": [
+                                "10.3318"
+                            ],
+                            "4": [
+                                "10.3299"
+                            ],
+                            "5": [
+                                "10.4526"
+                            ],
+                            "6": [
+                                "10.4202"
+                            ],
+                            "7": [
+                                "10.4367"
+                            ],
+                            "8": [
+                                "10.4955"
+                            ],
+                            "9": [
+                                "10.6406"
+                            ],
+                            "10": [
+                                "10.6798"
+                            ],
+                            "11": [
+                                "10.665"
+                            ],
+                            "12": [
+                                "10.6382"
+                            ],
+                            "13": [
+                                "10.557"
+                            ],
+                            "14": [
+                                "10.7498"
+                            ],
+                            "15": [
+                                "10.8058"
+                            ],
+                            "16": [
+                                "10.752"
+                            ],
+                            "17": [
+                                "10.6569"
+                            ],
+                            "18": [
+                                "10.4979"
+                            ],
+                            "19": [
+                                "10.5072"
+                            ],
+                            "20": [
+                                "10.3723"
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "structure": {
+            "links": [
+                {
+                    "rel": "dataflow",
+                    "urn": "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=NB:EXR(1.0)",
+                    "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+                },
+                {
+                    "rel": "datastructure",
+                    "urn": "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=NB:DSD_EXR(1.0)",
+                    "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+                }
+            ],
+            "name": "Valutakurser",
+            "names": {
+                "no": "Valutakurser"
+            },
+            "description": "Norges Banks valutakurser",
+            "descriptions": {
+                "no": "Norges Banks valutakurser"
+            },
+            "dimensions": {
+                "dataset": [],
+                "series": [
+                    {
+                        "id": "FREQ",
+                        "name": "Frekvens",
+                        "description": "Tidsintervallet for observasjoner over en gitt\n                        tidsperiode.",
+                        "keyPosition": 0,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "B",
+                                "name": "Virkedag",
+                                "description": "Virkedag"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "BASE_CUR",
+                        "name": "Basisvaluta",
+                        "description": "F\u00f8rste valuta i et valutakvoteringspar. Ogs\u00e5 kalt\n                        transaksjonsvalutaen.",
+                        "keyPosition": 1,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "DKK",
+                                "name": "Danske kroner"
+                            },
+                            {
+                                "id": "EUR",
+                                "name": "Euro"
+                            },
+                            {
+                                "id": "GBP",
+                                "name": "Britiske pund"
+                            },
+                            {
+                                "id": "SEK",
+                                "name": "Svenske kroner"
+                            },
+                            {
+                                "id": "USD",
+                                "name": "Amerikanske dollar"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "QUOTE_CUR",
+                        "name": "Kvoteringsvaluta",
+                        "description": "Den andre valutaen i et valutakvoteringspar. Ogs\u00e5\n                        kjent som motvaluta.",
+                        "keyPosition": 2,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "NOK",
+                                "name": "Norske kroner"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "TENOR",
+                        "name": "L\u00f8petid",
+                        "description": "Mengde tid igjen inntil tilbakebetaling av et l\u00e5n\n                        eller en finansiell kontrakt utl\u00f8per.",
+                        "keyPosition": 3,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "SP",
+                                "name": "Spot"
+                            }
+                        ]
+                    }
+                ],
+                "observation": [
+                    {
+                        "id": "TIME_PERIOD",
+                        "name": "Tidsperiode",
+                        "description": "Tidsperioden eller tidspunktet for den m\u00e5lte\n                        observasjonen.",
+                        "keyPosition": 4,
+                        "role": "time",
+                        "values": [
+                            {
+                                "start": "2023-02-23T00:00:00",
+                                "end": "2023-02-23T23:59:59",
+                                "id": "2023-02-23",
+                                "name": "2023-02-23"
+                            },
+                            {
+                                "start": "2023-02-24T00:00:00",
+                                "end": "2023-02-24T23:59:59",
+                                "id": "2023-02-24",
+                                "name": "2023-02-24"
+                            },
+                            {
+                                "start": "2023-02-27T00:00:00",
+                                "end": "2023-02-27T23:59:59",
+                                "id": "2023-02-27",
+                                "name": "2023-02-27"
+                            },
+                            {
+                                "start": "2023-02-28T00:00:00",
+                                "end": "2023-02-28T23:59:59",
+                                "id": "2023-02-28",
+                                "name": "2023-02-28"
+                            },
+                            {
+                                "start": "2023-03-01T00:00:00",
+                                "end": "2023-03-01T23:59:59",
+                                "id": "2023-03-01",
+                                "name": "2023-03-01"
+                            },
+                            {
+                                "start": "2023-03-02T00:00:00",
+                                "end": "2023-03-02T23:59:59",
+                                "id": "2023-03-02",
+                                "name": "2023-03-02"
+                            },
+                            {
+                                "start": "2023-03-03T00:00:00",
+                                "end": "2023-03-03T23:59:59",
+                                "id": "2023-03-03",
+                                "name": "2023-03-03"
+                            },
+                            {
+                                "start": "2023-03-06T00:00:00",
+                                "end": "2023-03-06T23:59:59",
+                                "id": "2023-03-06",
+                                "name": "2023-03-06"
+                            },
+                            {
+                                "start": "2023-03-07T00:00:00",
+                                "end": "2023-03-07T23:59:59",
+                                "id": "2023-03-07",
+                                "name": "2023-03-07"
+                            },
+                            {
+                                "start": "2023-03-08T00:00:00",
+                                "end": "2023-03-08T23:59:59",
+                                "id": "2023-03-08",
+                                "name": "2023-03-08"
+                            },
+                            {
+                                "start": "2023-03-09T00:00:00",
+                                "end": "2023-03-09T23:59:59",
+                                "id": "2023-03-09",
+                                "name": "2023-03-09"
+                            },
+                            {
+                                "start": "2023-03-10T00:00:00",
+                                "end": "2023-03-10T23:59:59",
+                                "id": "2023-03-10",
+                                "name": "2023-03-10"
+                            },
+                            {
+                                "start": "2023-03-13T00:00:00",
+                                "end": "2023-03-13T23:59:59",
+                                "id": "2023-03-13",
+                                "name": "2023-03-13"
+                            },
+                            {
+                                "start": "2023-03-14T00:00:00",
+                                "end": "2023-03-14T23:59:59",
+                                "id": "2023-03-14",
+                                "name": "2023-03-14"
+                            },
+                            {
+                                "start": "2023-03-15T00:00:00",
+                                "end": "2023-03-15T23:59:59",
+                                "id": "2023-03-15",
+                                "name": "2023-03-15"
+                            },
+                            {
+                                "start": "2023-03-16T00:00:00",
+                                "end": "2023-03-16T23:59:59",
+                                "id": "2023-03-16",
+                                "name": "2023-03-16"
+                            },
+                            {
+                                "start": "2023-03-17T00:00:00",
+                                "end": "2023-03-17T23:59:59",
+                                "id": "2023-03-17",
+                                "name": "2023-03-17"
+                            },
+                            {
+                                "start": "2023-03-20T00:00:00",
+                                "end": "2023-03-20T23:59:59",
+                                "id": "2023-03-20",
+                                "name": "2023-03-20"
+                            },
+                            {
+                                "start": "2023-03-21T00:00:00",
+                                "end": "2023-03-21T23:59:59",
+                                "id": "2023-03-21",
+                                "name": "2023-03-21"
+                            },
+                            {
+                                "start": "2023-03-22T00:00:00",
+                                "end": "2023-03-22T23:59:59",
+                                "id": "2023-03-22",
+                                "name": "2023-03-22"
+                            },
+                            {
+                                "start": "2023-03-23T00:00:00",
+                                "end": "2023-03-23T23:59:59",
+                                "id": "2023-03-23",
+                                "name": "2023-03-23"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "attributes": {
+                "dataset": [],
+                "series": [
+                    {
+                        "id": "DECIMALS",
+                        "name": "Desimaler",
+                        "description": "Antall sifre til h\u00f8yre for desimalskilletegnet.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "2",
+                                "name": "2"
+                            },
+                            {
+                                "id": "4",
+                                "name": "4"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "CALCULATED",
+                        "name": "Kalkulert",
+                        "description": "Indikerer om verdien er en kalkulasjon / anslag\n                        eller en observert verdi.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "false",
+                                "name": "false"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "UNIT_MULT",
+                        "name": "Multiplikator",
+                        "description": "Eksponent i tiende potens slik at en\n                        multiplikasjon av observasjonsverdien med 10^UNIT_MULT gir verdien av en\n                        enhet.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "2",
+                                "name": "Hundre"
+                            },
+                            {
+                                "id": "0",
+                                "name": "Enheter"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "COLLECTION",
+                        "name": "Innsamlingstidspunkt",
+                        "description": "Datoer eller perioder for n\u00e5r verdien ble\n                        innhentet.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "C",
+                                "name": "ECB concertation tidspunkt 14:15 CET"
+                            }
+                        ]
+                    }
+                ],
+                "observation": []
+            }
+        }
+    }
+}

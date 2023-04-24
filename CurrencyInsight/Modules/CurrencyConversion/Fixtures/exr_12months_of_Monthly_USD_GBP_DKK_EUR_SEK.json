@@ -1,0 +1,557 @@
+{
+    "meta": {
+        "id": "IREF468111",
+        "prepared": "2023-03-24T08:33:39",
+        "test": false,
+        "sender": {
+            "id": "NB"
+        },
+        "receiver": {
+            "id": "ANONYMOUS"
+        },
+        "links": [
+            {
+                "href": "data/all,EXR,latest/M.EUR+GBP+DKK+USD+SEK.NOK.SP/all?startPeriod=2022-02-01&endPeriod=2023-02-01&detail=full",
+                "rel": "self",
+                "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+            }
+        ]
+    },
+    "data": {
+        "dataSets": [
+            {
+                "links": [
+                    {
+                        "rel": "dataflow",
+                        "urn": "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=NB:EXR(1.0)",
+                        "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+                    }
+                ],
+                "action": "Information",
+                "series": {
+                    "0:0:0:0": {
+                        "attributes": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "135.13"
+                            ],
+                            "1": [
+                                "130.86"
+                            ],
+                            "2": [
+                                "129.37"
+                            ],
+                            "3": [
+                                "136.25"
+                            ],
+                            "4": [
+                                "138.55"
+                            ],
+                            "5": [
+                                "136.81"
+                            ],
+                            "6": [
+                                "132.15"
+                            ],
+                            "7": [
+                                "136.75"
+                            ],
+                            "8": [
+                                "139.7"
+                            ],
+                            "9": [
+                                "138.95"
+                            ],
+                            "10": [
+                                "140.47"
+                            ],
+                            "11": [
+                                "144.05"
+                            ],
+                            "12": [
+                                "147.12"
+                            ]
+                        }
+                    },
+                    "0:1:0:0": {
+                        "attributes": [
+                            1,
+                            0,
+                            1,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "10.0544"
+                            ],
+                            "1": [
+                                "9.7367"
+                            ],
+                            "2": [
+                                "9.6239"
+                            ],
+                            "3": [
+                                "10.1373"
+                            ],
+                            "4": [
+                                "10.3072"
+                            ],
+                            "5": [
+                                "10.1823"
+                            ],
+                            "6": [
+                                "9.8309"
+                            ],
+                            "7": [
+                                "10.1697"
+                            ],
+                            "8": [
+                                "10.3919"
+                            ],
+                            "9": [
+                                "10.3357"
+                            ],
+                            "10": [
+                                "10.448"
+                            ],
+                            "11": [
+                                "10.7149"
+                            ],
+                            "12": [
+                                "10.9529"
+                            ]
+                        }
+                    },
+                    "0:2:0:0": {
+                        "attributes": [
+                            1,
+                            0,
+                            1,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "12.0002"
+                            ],
+                            "1": [
+                                "11.6422"
+                            ],
+                            "2": [
+                                "11.4984"
+                            ],
+                            "3": [
+                                "11.9274"
+                            ],
+                            "4": [
+                                "12.0164"
+                            ],
+                            "5": [
+                                "11.9854"
+                            ],
+                            "6": [
+                                "11.6349"
+                            ],
+                            "7": [
+                                "11.6271"
+                            ],
+                            "8": [
+                                "11.9369"
+                            ],
+                            "9": [
+                                "11.8954"
+                            ],
+                            "10": [
+                                "12.0174"
+                            ],
+                            "11": [
+                                "12.1469"
+                            ],
+                            "12": [
+                                "12.3694"
+                            ]
+                        }
+                    },
+                    "0:3:0:0": {
+                        "attributes": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "95.45"
+                            ],
+                            "1": [
+                                "92.34"
+                            ],
+                            "2": [
+                                "93.27"
+                            ],
+                            "3": [
+                                "96.6"
+                            ],
+                            "4": [
+                                "97.17"
+                            ],
+                            "5": [
+                                "96.29"
+                            ],
+                            "6": [
+                                "93.62"
+                            ],
+                            "7": [
+                                "94.3"
+                            ],
+                            "8": [
+                                "94.91"
+                            ],
+                            "9": [
+                                "95"
+                            ],
+                            "10": [
+                                "95.11"
+                            ],
+                            "11": [
+                                "95.63"
+                            ],
+                            "12": [
+                                "98.05"
+                            ]
+                        }
+                    },
+                    "0:4:0:0": {
+                        "attributes": [
+                            1,
+                            0,
+                            1,
+                            0
+                        ],
+                        "observations": {
+                            "0": [
+                                "8.8651"
+                            ],
+                            "1": [
+                                "8.8367"
+                            ],
+                            "2": [
+                                "8.9013"
+                            ],
+                            "3": [
+                                "9.5875"
+                            ],
+                            "4": [
+                                "9.7645"
+                            ],
+                            "5": [
+                                "10.0042"
+                            ],
+                            "6": [
+                                "9.7068"
+                            ],
+                            "7": [
+                                "10.2735"
+                            ],
+                            "8": [
+                                "10.5775"
+                            ],
+                            "9": [
+                                "10.1355"
+                            ],
+                            "10": [
+                                "9.8672"
+                            ],
+                            "11": [
+                                "9.9506"
+                            ],
+                            "12": [
+                                "10.2231"
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "structure": {
+            "links": [
+                {
+                    "rel": "dataflow",
+                    "urn": "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=NB:EXR(1.0)",
+                    "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+                },
+                {
+                    "rel": "datastructure",
+                    "urn": "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=NB:DSD_EXR(1.0)",
+                    "uri": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/develop/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json"
+                }
+            ],
+            "name": "Valutakurser",
+            "names": {
+                "no": "Valutakurser"
+            },
+            "description": "Norges Banks valutakurser",
+            "descriptions": {
+                "no": "Norges Banks valutakurser"
+            },
+            "dimensions": {
+                "dataset": [],
+                "series": [
+                    {
+                        "id": "FREQ",
+                        "name": "Frekvens",
+                        "description": "Tidsintervallet for observasjoner over en gitt\n                        tidsperiode.",
+                        "keyPosition": 0,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "M",
+                                "name": "M\u00e5nedlig",
+                                "description": "M\u00e5nedlig"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "BASE_CUR",
+                        "name": "Basisvaluta",
+                        "description": "F\u00f8rste valuta i et valutakvoteringspar. Ogs\u00e5 kalt\n                        transaksjonsvalutaen.",
+                        "keyPosition": 1,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "DKK",
+                                "name": "Danske kroner"
+                            },
+                            {
+                                "id": "EUR",
+                                "name": "Euro"
+                            },
+                            {
+                                "id": "GBP",
+                                "name": "Britiske pund"
+                            },
+                            {
+                                "id": "SEK",
+                                "name": "Svenske kroner"
+                            },
+                            {
+                                "id": "USD",
+                                "name": "Amerikanske dollar"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "QUOTE_CUR",
+                        "name": "Kvoteringsvaluta",
+                        "description": "Den andre valutaen i et valutakvoteringspar. Ogs\u00e5\n                        kjent som motvaluta.",
+                        "keyPosition": 2,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "NOK",
+                                "name": "Norske kroner"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "TENOR",
+                        "name": "L\u00f8petid",
+                        "description": "Mengde tid igjen inntil tilbakebetaling av et l\u00e5n\n                        eller en finansiell kontrakt utl\u00f8per.",
+                        "keyPosition": 3,
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "SP",
+                                "name": "Spot"
+                            }
+                        ]
+                    }
+                ],
+                "observation": [
+                    {
+                        "id": "TIME_PERIOD",
+                        "name": "Tidsperiode",
+                        "description": "Tidsperioden eller tidspunktet for den m\u00e5lte\n                        observasjonen.",
+                        "keyPosition": 4,
+                        "role": "time",
+                        "values": [
+                            {
+                                "start": "2022-02-01T00:00:00",
+                                "end": "2022-02-28T23:59:59",
+                                "id": "2022-02",
+                                "name": "2022-02"
+                            },
+                            {
+                                "start": "2022-03-01T00:00:00",
+                                "end": "2022-03-31T23:59:59",
+                                "id": "2022-03",
+                                "name": "2022-03"
+                            },
+                            {
+                                "start": "2022-04-01T00:00:00",
+                                "end": "2022-04-30T23:59:59",
+                                "id": "2022-04",
+                                "name": "2022-04"
+                            },
+                            {
+                                "start": "2022-05-01T00:00:00",
+                                "end": "2022-05-31T23:59:59",
+                                "id": "2022-05",
+                                "name": "2022-05"
+                            },
+                            {
+                                "start": "2022-06-01T00:00:00",
+                                "end": "2022-06-30T23:59:59",
+                                "id": "2022-06",
+                                "name": "2022-06"
+                            },
+                            {
+                                "start": "2022-07-01T00:00:00",
+                                "end": "2022-07-31T23:59:59",
+                                "id": "2022-07",
+                                "name": "2022-07"
+                            },
+                            {
+                                "start": "2022-08-01T00:00:00",
+                                "end": "2022-08-31T23:59:59",
+                                "id": "2022-08",
+                                "name": "2022-08"
+                            },
+                            {
+                                "start": "2022-09-01T00:00:00",
+                                "end": "2022-09-30T23:59:59",
+                                "id": "2022-09",
+                                "name": "2022-09"
+                            },
+                            {
+                                "start": "2022-10-01T00:00:00",
+                                "end": "2022-10-31T23:59:59",
+                                "id": "2022-10",
+                                "name": "2022-10"
+                            },
+                            {
+                                "start": "2022-11-01T00:00:00",
+                                "end": "2022-11-30T23:59:59",
+                                "id": "2022-11",
+                                "name": "2022-11"
+                            },
+                            {
+                                "start": "2022-12-01T00:00:00",
+                                "end": "2022-12-31T23:59:59",
+                                "id": "2022-12",
+                                "name": "2022-12"
+                            },
+                            {
+                                "start": "2023-01-01T00:00:00",
+                                "end": "2023-01-31T23:59:59",
+                                "id": "2023-01",
+                                "name": "2023-01"
+                            },
+                            {
+                                "start": "2023-02-01T00:00:00",
+                                "end": "2023-02-28T23:59:59",
+                                "id": "2023-02",
+                                "name": "2023-02"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "attributes": {
+                "dataset": [],
+                "series": [
+                    {
+                        "id": "DECIMALS",
+                        "name": "Desimaler",
+                        "description": "Antall sifre til h\u00f8yre for desimalskilletegnet.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "2",
+                                "name": "2"
+                            },
+                            {
+                                "id": "4",
+                                "name": "4"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "CALCULATED",
+                        "name": "Kalkulert",
+                        "description": "Indikerer om verdien er en kalkulasjon / anslag\n                        eller en observert verdi.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "false",
+                                "name": "false"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "UNIT_MULT",
+                        "name": "Multiplikator",
+                        "description": "Eksponent i tiende potens slik at en\n                        multiplikasjon av observasjonsverdien med 10^UNIT_MULT gir verdien av en\n                        enhet.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "2",
+                                "name": "Hundre"
+                            },
+                            {
+                                "id": "0",
+                                "name": "Enheter"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "COLLECTION",
+                        "name": "Innsamlingstidspunkt",
+                        "description": "Datoer eller perioder for n\u00e5r verdien ble\n                        innhentet.",
+                        "relationship": {
+                            "dimensions": [
+                                "BASE_CUR",
+                                "QUOTE_CUR",
+                                "TENOR"
+                            ]
+                        },
+                        "role": null,
+                        "values": [
+                            {
+                                "id": "A",
+                                "name": "Gjennomsnitt av observasjoner gjennom perioden"
+                            }
+                        ]
+                    }
+                ],
+                "observation": []
+            }
+        }
+    }
+}
+
