@@ -109,7 +109,7 @@ extension CurrencyConversionView.ViewData {
                 continue
             }
 
-            guard let _calculated = _calculated else {
+            guard _calculated != nil else {
                 print("missing calculated")
                 continue
             }

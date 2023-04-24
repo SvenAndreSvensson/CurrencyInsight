@@ -6,7 +6,7 @@ extension NorgesBank.GetExchangeRatesRequest: ApiRequest {
         // https://data.norges-bank.no/api/data/EXR/B.USD+AUD.NOK.SP?format=sdmx-json&startPeriod=2022-02-10&endPeriod=2023-02-10&locale=no
         // https://data.norges-bank.no/api/data/EXR/B..NOK.SP?lastNObservations=1&format=sdmx-json
         // url path
-        let currency = currencies.map { $0.code }.joined(separator: "+")
+        // let currency = currencies.map { $0.code }.joined(separator: "+")
         let path = "/api/data/EXR/B..NOK.SP"
 
         // add date interval
