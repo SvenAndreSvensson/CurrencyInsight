@@ -7,7 +7,7 @@ Currency Insight is an iOS app that converts currencies. The app uses data from 
 
 ## Features
 - Currency Converter: converts a specific amount of base currency to quote currencies. The quote currencies can be long-tapped to set them as the base currency, and the base can also be selected from a searchable currency selection view.
-- Cross-Course Method: All data from Norges Bank can only be recived with NOK as the quote currency, so to use any other currencies as the base and quote currency a litle work has to be done with the data.
+- Cross-Course Method: All data from Norges Bank can only be recived with NOK as the quote currency, so to use any other currencies as the base and quote currency this cross-cource method is applied.
 - Formatted Input: The TextField for input of text is formatted on the fly.
 - Dark and Light Mode: The app is designed to work in both dark and light mode, but not much energy is put into it, it's more to show how'
 - For iPhone >= iOS 15.5, not tested for how low it can go.
