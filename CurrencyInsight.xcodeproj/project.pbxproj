@@ -229,7 +229,7 @@
 				2654464729F3A08A004AF0AB /* Networking */,
 				265446A129F3A321004AF0AB /* Models */,
 				2654463E29F396F6004AF0AB /* Modules */,
-				26BD409029F5629800702522 /* Compoents */,
+				26BD409029F5629800702522 /* Components */,
 				2654464229F397E7004AF0AB /* Extensions */,
 				2654463F29F39706004AF0AB /* Resources */,
 				2654464829F3A155004AF0AB /* Utils */,
@@ -546,12 +546,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		26BD409029F5629800702522 /* Compoents */ = {
+		26BD409029F5629800702522 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				26BD409129F562B500702522 /* ErrorMessageView.swift */,
 			);
-			path = Compoents;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		26BD409429F655DE00702522 /* ReadMe */ = {
