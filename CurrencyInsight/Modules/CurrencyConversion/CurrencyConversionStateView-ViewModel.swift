@@ -4,6 +4,7 @@ extension CurrencyConversionStateView {
     class ViewModel: ObservableObject {
         @Published var state: State
         @Published var configuration: CurrencyConversionConfig
+        @Published var showingCurrencySelection: Bool
 
         private var previousRequestConfiguration: CurrencyConversionConfig?
         private let client: NorgesBank.ExchangeRatesClient
@@ -11,11 +12,13 @@ extension CurrencyConversionStateView {
         init(
             state: State = .initial,
             configuration: CurrencyConversionConfig = .defaultConfiguration(),
-            client: NorgesBank.ExchangeRatesClient = .init()
+            client: NorgesBank.ExchangeRatesClient = .init(),
+            showingCurrencySelection: Bool = false
         ) {
             self.state = state
             self.client = client
             self.configuration = configuration
+            self.showingCurrencySelection = showingCurrencySelection
         }
 
         @MainActor

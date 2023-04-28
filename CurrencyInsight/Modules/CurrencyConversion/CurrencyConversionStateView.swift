@@ -2,7 +2,6 @@ import SwiftUI
 
 struct CurrencyConversionStateView: View {
     @ObservedObject var viewModel: ViewModel
-    @State private var showingCurrencySelection = false
 
     var body: some View {
         switch viewModel.state {
@@ -31,12 +30,12 @@ struct CurrencyConversionStateView: View {
         CurrencyConversionView(viewData: viewData, actions: viewModel)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { showingCurrencySelection.toggle() }) {
+                    Button(action: { viewModel.showingCurrencySelection.toggle() }) {
                         Text("Edit")
                     }
                 }
             }
-            .sheet(isPresented: $showingCurrencySelection, onDismiss: {
+            .sheet(isPresented: $viewModel.showingCurrencySelection, onDismiss: {
                 Task { await viewModel.fetchExchangeRatesIfNeeded(withFetchingState: false) }
             }) {
                 CurrencySelectionView(
