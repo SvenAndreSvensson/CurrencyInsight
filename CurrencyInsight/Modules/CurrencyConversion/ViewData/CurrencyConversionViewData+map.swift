@@ -4,7 +4,6 @@ import Foundation
 
 extension CurrencyConversionViewData {
     static func map(dto: NorgesBank.ExchangeRatesResponse, configuration: CurrencyConversionConfig) -> Self? {
-
         var series = [ExchangeRateSerie]()
 
         guard let dataset = dto.data.dataSets.first else {
@@ -12,7 +11,7 @@ extension CurrencyConversionViewData {
             return nil
         }
 
-        // take out the one, I think it can only be one
+        // take out the first one, there should only be one
         guard let firstDimensionOservation = dto.data.structure.dimensions.observation.filter({ dimObs in
             dimObs.id == NorgesBank.NbDemensionOservationKey.TIME_PERIOD.rawValue
         }).first else {
@@ -127,15 +126,15 @@ extension CurrencyConversionViewData {
             let _orginalBaseValue = Double(pow(10, Double(_multiplier)))
             let _baseValue = 1.0
 
-            // Observations
             var _observations = [ExchangeRateObservation]()
             for nbObservation in datasetSerie.value.observations.sorted(by: { $0.key < $1.key }) {
+
                 // key is an index - and points to date part
                 let id = nbObservation.key // Int index
-                // tror det kun er et item i arrayen
-                // value as string
                 let orginalValueAsString = nbObservation.value.first ?? "nan"
                 let orginalValue = Double(orginalValueAsString) ?? Double.nan
+
+                // gets the one unit value, finding quote value for whene base value = 1.0
                 let oneUnitValue =  orginalValue / _orginalBaseValue
                 let valueAsString = (try? oneUnitValue.formatted(scale: _decimals)) ?? "N/A"
 
@@ -145,7 +144,6 @@ extension CurrencyConversionViewData {
                 let start = nbDateObservation.start
                 let end = nbDateObservation.end
 
-                // new observation object value and dates in same serie, dates then duplicated - tja
                 let observation = ExchangeRateObservation(
                     id: index,
                     value: oneUnitValue,
