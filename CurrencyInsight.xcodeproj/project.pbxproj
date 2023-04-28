@@ -54,7 +54,6 @@
 		265446DB29F3A3A0004AF0AB /* CurrencyConversionStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446B229F3A3A0004AF0AB /* CurrencyConversionStateView.swift */; };
 		265446DC29F3A3A0004AF0AB /* CurrencyConversionStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446B329F3A3A0004AF0AB /* CurrencyConversionStateViewModel.swift */; };
 		265446DD29F3A3A0004AF0AB /* CurrencyConversionViewData+sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446B729F3A3A0004AF0AB /* CurrencyConversionViewData+sorted.swift */; };
-		265446DE29F3A3A0004AF0AB /* CurrencyConversionViewData+normalizeToBaseUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446B829F3A3A0004AF0AB /* CurrencyConversionViewData+normalizeToBaseUnit.swift */; };
 		265446DF29F3A3A0004AF0AB /* CurrencyConversionViewData+filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446B929F3A3A0004AF0AB /* CurrencyConversionViewData+filter.swift */; };
 		265446E029F3A3A0004AF0AB /* CurrencyConversionViewData+swapBaseAndQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446BA29F3A3A0004AF0AB /* CurrencyConversionViewData+swapBaseAndQuote.swift */; };
 		265446E129F3A3A0004AF0AB /* CurrencyConversionViewData+map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265446BB29F3A3A0004AF0AB /* CurrencyConversionViewData+map.swift */; };
@@ -150,7 +149,6 @@
 		265446B229F3A3A0004AF0AB /* CurrencyConversionStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionStateView.swift; sourceTree = "<group>"; };
 		265446B329F3A3A0004AF0AB /* CurrencyConversionStateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionStateViewModel.swift; sourceTree = "<group>"; };
 		265446B729F3A3A0004AF0AB /* CurrencyConversionViewData+sorted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionViewData+sorted.swift"; sourceTree = "<group>"; };
-		265446B829F3A3A0004AF0AB /* CurrencyConversionViewData+normalizeToBaseUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionViewData+normalizeToBaseUnit.swift"; sourceTree = "<group>"; };
 		265446B929F3A3A0004AF0AB /* CurrencyConversionViewData+filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionViewData+filter.swift"; sourceTree = "<group>"; };
 		265446BA29F3A3A0004AF0AB /* CurrencyConversionViewData+swapBaseAndQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionViewData+swapBaseAndQuote.swift"; sourceTree = "<group>"; };
 		265446BB29F3A3A0004AF0AB /* CurrencyConversionViewData+map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrencyConversionViewData+map.swift"; sourceTree = "<group>"; };
@@ -482,7 +480,6 @@
 				265446BB29F3A3A0004AF0AB /* CurrencyConversionViewData+map.swift */,
 				265446B929F3A3A0004AF0AB /* CurrencyConversionViewData+filter.swift */,
 				265446B729F3A3A0004AF0AB /* CurrencyConversionViewData+sorted.swift */,
-				265446B829F3A3A0004AF0AB /* CurrencyConversionViewData+normalizeToBaseUnit.swift */,
 				265446BA29F3A3A0004AF0AB /* CurrencyConversionViewData+swapBaseAndQuote.swift */,
 			);
 			path = ViewData;
@@ -762,7 +759,6 @@
 				2654467F29F3A210004AF0AB /* ApiRequestLoader.swift in Sources */,
 				2654468429F3A210004AF0AB /* URLRequest.swift in Sources */,
 				2654468729F3A210004AF0AB /* JSONDecoder+norgesBankDecoder.swift in Sources */,
-				265446DE29F3A3A0004AF0AB /* CurrencyConversionViewData+normalizeToBaseUnit.swift in Sources */,
 				265446A729F3A35E004AF0AB /* CurrencyInputField.swift in Sources */,
 				265446F529F3A3A0004AF0AB /* ExchangeError.swift in Sources */,
 				2654469829F3A2AF004AF0AB /* View+if.swift in Sources */,
