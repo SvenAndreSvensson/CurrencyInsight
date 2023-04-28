@@ -1,6 +1,6 @@
 import Foundation
 
-extension CurrencyConversionView.ViewData {
+extension CurrencyConversionViewData {
     static func swapBaseAndQuote(
         viewData: Self,
         baseCurrency: NorgesBank.Currency,
@@ -25,7 +25,7 @@ extension CurrencyConversionView.ViewData {
     }
 }
 
-extension CurrencyConversionView.ViewData {
+extension CurrencyConversionViewData {
 
     private static func rebaseAndSwap(
         _ viewData: Self,
@@ -118,7 +118,7 @@ extension CurrencyConversionView.ViewData {
     }
 }
 
-extension CurrencyConversionView.ViewData {
+extension CurrencyConversionViewData {
     /// Quote currency is in NOK, then we only need to transforme this to the
     private static func swapBaseAndQuote(_ viewData: Self, baseCurrency: NorgesBank.Currency) throws -> Self {
         var swapedSeries = [ExchangeRateSerie]()

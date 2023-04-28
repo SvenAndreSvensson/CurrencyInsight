@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CurrencyInputField: View {
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject var viewModel: CurrencyInputFieldModel
     var update: ((_ newMultiplier:Double) -> Void)?
 
     var body: some View {

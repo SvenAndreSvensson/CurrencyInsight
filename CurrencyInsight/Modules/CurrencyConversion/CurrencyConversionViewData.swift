@@ -1,13 +1,11 @@
 import Foundation
 
-extension CurrencyConversionView {
-    struct ViewData {
-        let baseCurrency: NorgesBank.Currency
-        var multiplier: Double
-        let series: [ExchangeRateSerie]
-        let meta: CurrencyConversionMeta
-        let missingSeriesCurrencies: [NorgesBank.Currency]
-    }
+struct CurrencyConversionViewData {
+    let baseCurrency: NorgesBank.Currency
+    var multiplier: Double
+    let series: [ExchangeRateSerie]
+    let meta: CurrencyConversionMeta
+    let missingSeriesCurrencies: [NorgesBank.Currency]
 }
 
 struct CurrencyConversionMeta {
@@ -60,7 +58,7 @@ struct ExchangeRateObservation: Identifiable, Hashable {
     let end: Date // from format "2011-09-30T23:59:59"
 }
 
-extension CurrencyConversionView.ViewData {
+extension CurrencyConversionViewData {
     static let placeholder: Self = previewValues()
 
     static func previewValues(msg: String = "Error" ) -> Self {

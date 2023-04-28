@@ -2,7 +2,7 @@ import SwiftUI
 
 struct BaseCurrencySelectionView: View {
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject var viewModel: BaseCurrencySelectionViewModel
     var onSelect: ((NorgesBank.Currency) -> Void)?
 
     var body: some View {

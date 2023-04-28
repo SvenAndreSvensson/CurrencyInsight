@@ -2,7 +2,7 @@ import Foundation
 
 // https://github.com/sdmx-twg/sdmx-json
 
-extension CurrencyConversionView.ViewData {
+extension CurrencyConversionViewData {
     static func map(dto: NorgesBank.ExchangeRatesResponse, configuration: CurrencyConversionConfig) -> Self? {
 
         var series = [ExchangeRateSerie]()
@@ -173,7 +173,7 @@ extension CurrencyConversionView.ViewData {
             index += 1
         }
 
-        return CurrencyConversionView.ViewData(
+        return CurrencyConversionViewData(
             baseCurrency: configuration.baseCurrency,
             multiplier: configuration.multiplier,
             series: series,

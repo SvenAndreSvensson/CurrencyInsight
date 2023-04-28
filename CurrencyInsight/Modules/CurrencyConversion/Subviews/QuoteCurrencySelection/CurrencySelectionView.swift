@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CurrencySelectionView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject var viewModel: CurrencySelectionViewModel
     var onDone:(([NorgesBank.Currency])  -> Void)?
 
     var body: some View {
@@ -28,14 +28,17 @@ struct CurrencySelectionView: View {
     }
 
     func selectedCurrency(_ currency: NorgesBank.Currency) -> some View {
-        CurrencySelectionRow(
-            currency: currency,
-            isMovable: true,
-            actionImage: Image(systemName: "minus.circle.fill"),
-            actionImageColor: .red
-        ) {
-            viewModel.removeFromSelected(currency: currency)
-        }
+        CurrencySelectionRow(rowData:
+                .init(
+                    currency: currency,
+                    isMovable: true,
+                    image: Image(systemName: "minus.circle.fill"),
+                    imageColor: .red,
+                    onSelect: {
+                        viewModel.removeFromSelected(currency: currency)
+                    }
+                )
+        )
     }
 
     var selectedCurrenciesHeader: some View {
@@ -53,14 +56,17 @@ struct CurrencySelectionView: View {
     }
 
     func availableCurrency(_ currency: NorgesBank.Currency) -> some View {
-        CurrencySelectionRow(
-            currency: currency,
-            isMovable: false,
-            actionImage: Image(systemName: "plus.circle.fill"),
-            actionImageColor: .green
-        ) {
-            viewModel.addToSelected(currency: currency)
-        }
+        CurrencySelectionRow( rowData:
+                .init(
+                    currency: currency,
+                    isMovable: false,
+                    image: Image(systemName: "plus.circle.fill"),
+                    imageColor: .green,
+                    onSelect: {
+                        viewModel.addToSelected(currency: currency)
+                    }
+                )
+        )
     }
 
     var availableCurrencyHeader: some View {

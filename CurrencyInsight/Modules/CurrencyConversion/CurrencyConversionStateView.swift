@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CurrencyConversionStateView: View {
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject var viewModel: CurrencyConversionStateViewModel
 
     var body: some View {
         switch viewModel.state {
@@ -26,7 +26,7 @@ struct CurrencyConversionStateView: View {
         }
     }
 
-    func exchangeRateListView(viewData: CurrencyConversionView.ViewData) -> some View {
+    func exchangeRateListView(viewData: CurrencyConversionViewData) -> some View {
         CurrencyConversionView(viewData: viewData, actions: viewModel)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

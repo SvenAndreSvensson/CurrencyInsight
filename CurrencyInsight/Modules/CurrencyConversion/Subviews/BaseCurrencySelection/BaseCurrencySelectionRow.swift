@@ -1,19 +1,7 @@
 import SwiftUI
 
-extension BaseCurrencySelectionRow {
-    class ViewData {
-        var currency: NorgesBank.Currency
-        var selected: Bool
-
-        init(_ currency: NorgesBank.Currency, selected: Bool) {
-            self.currency = currency
-            self.selected = selected
-        }
-    }
-}
-
 struct BaseCurrencySelectionRow: View {
-    var viewData: ViewData
+    var viewData: BaseCurrencySelectionRowData
 
     var body: some View {
 

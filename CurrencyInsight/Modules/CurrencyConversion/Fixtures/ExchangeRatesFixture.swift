@@ -27,12 +27,12 @@ struct ExchangeRatesFixture {
 
     static func viewData(
         for fixtureCase: FixtureCase = .exr_1mnd_of_Business_USD_GBP_DKK_EUR_SEK
-    ) -> CurrencyConversionView.ViewData {
+    ) -> CurrencyConversionViewData {
         guard let dto = loadFixture(fileName: fixtureCase.rawValue) else {
             fatalError("❌ we couldn't find the fixture for \(fixtureCase.rawValue)")
         }
 
-        guard let viewData = CurrencyConversionView.ViewData.map(
+        guard let viewData = CurrencyConversionViewData.map(
             dto: dto,
             configuration: .defaultConfiguration()
         ) else {

@@ -1,6 +1,6 @@
 import Foundation
 
-extension CurrencyConversionView.ViewData {
+extension CurrencyConversionViewData {
     static func filter(viewData: Self, includedCurrencies: [NorgesBank.Currency]) throws -> Self {
 
         return .init(

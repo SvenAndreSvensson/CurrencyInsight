@@ -6,13 +6,13 @@ protocol CurrencyConversionActions {
 }
 
 struct CurrencyConversionView: View {
-    let viewData: ViewData
+    let viewData: CurrencyConversionViewData
     var actions: CurrencyConversionActions?
 
     @State private var multiplier: Double = 0
     @FocusState private var isInputActive: Bool
 
-    init(viewData: ViewData, actions: CurrencyConversionActions? = nil) {
+    init(viewData: CurrencyConversionViewData, actions: CurrencyConversionActions? = nil) {
         self.viewData = viewData
         self.actions = actions
         _multiplier = State(initialValue: viewData.multiplier)

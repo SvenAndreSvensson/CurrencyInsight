@@ -1,6 +1,6 @@
 import Foundation
 
-extension CurrencyConversionView.ViewData {
+extension CurrencyConversionViewData {
 
     static func sortSeries(viewData: Self, sortOrder currencies: [NorgesBank.Currency]) throws -> Self {
 
