@@ -31,18 +31,14 @@ class CurrencyConversionStateViewModel: ObservableObject {
         var metaMessage: String = ""
 
         do {
-
             if !CurrencyConversionConfig.hasSavedConfiguration && configuration.selectedCurrencies.count == 0 {
                 // setup defaults
                 configuration.selectedCurrencies = [.NOK, .SEK, .DKK, .ISK, .GBP, .EUR, .USD]
             }
 
-            // TODO: should be get all, when no network, you can end up not having all data.
-            //dto = try await client.getOneOfAllExchangeRates()
-            dto = try await client.getLastNObservations(
-                currencies: configuration.requiredCurrenciesForRequest,
-                locale: "no"
-            )
+            // Important:
+            // getting data for all currencies, makes it possible to use app without the internet
+            dto = try await client.getOneOfAllExchangeRates()
             saveLastDTO(dto: dto)
             metaMessage = ""
 
@@ -81,7 +77,9 @@ class CurrencyConversionStateViewModel: ObservableObject {
                 CurrencyConversionConfig.save(config: configuration)
             }
 
-            // VALIDATE DATA, Check that we have serie data for the
+            // VALIDATE DATA
+            // ⚠️ TODO: add comments for what this does
+            // Check that we have serie data for the
             if !viewData.missingSeriesCurrencies.isEmpty {
                 configuration.excludedCurrencies = viewData.missingSeriesCurrencies
                 if viewData.missingSeriesCurrencies.contains(viewData.baseCurrency) {
@@ -89,10 +87,15 @@ class CurrencyConversionStateViewModel: ObservableObject {
                 }
                 CurrencyConversionConfig.save(config: configuration)
             }
+            // Filter
+            let filtteredViewData = try CurrencyConversionViewData.filter(
+                viewData: viewData,
+                includedCurrencies: configuration.requiredCurrenciesForPresentation
+            )
 
             // switch base and qoute. NOK is quote for all currency pairs
             let swappedViewData = try CurrencyConversionViewData.swapBaseAndQuote(
-                viewData: viewData,
+                viewData: filtteredViewData,
                 baseCurrency: configuration.baseCurrency,
                 selectedCurrencies: configuration.selectedCurrencies
             )

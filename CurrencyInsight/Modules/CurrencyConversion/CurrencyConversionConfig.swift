@@ -42,6 +42,14 @@ extension CurrencyConversionConfig {
         }
         return list
     }
+
+    var requiredCurrenciesForPresentation: [NorgesBank.Currency] {
+        var list = selectedCurrencies
+        if baseCurrency != .NOK && !selectedCurrencies.contains(baseCurrency) {
+            list.append(baseCurrency)
+        }
+        return list
+    }
 }
 
 extension CurrencyConversionConfig {
