@@ -2,7 +2,6 @@ import SwiftUI
 
 struct CurrencyInputField: View {
     @ObservedObject var viewModel: CurrencyInputFieldModel
-    var update: ((_ newMultiplier:Double) -> Void)?
 
     var body: some View {
         VStack(spacing: .spacingM) {
@@ -32,7 +31,6 @@ struct CurrencyInputField: View {
             .padding(.vertical, 8)
             .onChange(of: viewModel.textField) { newInput in
                 viewModel.validateTyped(input: newInput)
-                update?(viewModel.multiplier)
             }
     }
 
@@ -60,7 +58,7 @@ struct CurrencyInputField_Previews: PreviewProvider {
     static var previews: some View {
         CurrencyInputField(viewModel:
                 .init(
-                    multiplier: 1.0,
+                    multiplier: .constant(1.0),
                     currency: .NOK,
                     formatter: NumberFormatter.currencyTextField
                 )

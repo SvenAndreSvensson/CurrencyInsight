@@ -61,7 +61,6 @@ extension CurrencyConversionViewData {
 
         return .init(
             baseCurrency: viewData.baseCurrency,
-            multiplier: viewData.multiplier,
             series: rebasedSeries,
             meta: viewData.meta,
             missingSeriesCurrencies: viewData.missingSeriesCurrencies
@@ -129,7 +128,6 @@ extension CurrencyConversionViewData {
         }
         return .init(
             baseCurrency: baseCurrency,
-            multiplier: viewData.multiplier,
             series: swapedSeries,
             meta: viewData.meta,
             missingSeriesCurrencies: viewData.missingSeriesCurrencies

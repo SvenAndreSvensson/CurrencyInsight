@@ -8,7 +8,6 @@ extension CurrencyConversionViewData {
 
         return .init(
             baseCurrency: viewData.baseCurrency,
-            multiplier: viewData.multiplier,
             series: sortedSeries,
             meta: viewData.meta,
             missingSeriesCurrencies: viewData.missingSeriesCurrencies

@@ -2,18 +2,18 @@ import SwiftUI
 
 
 class CurrencyInputFieldModel: ObservableObject {
-    @Published var multiplier: Double
+    @Binding var multiplier: Double
     let currency: NorgesBank.Currency
     let formatter: NumberFormatter
 
     @Published var textField: String = ""
     @Published var errorMessage: String? = nil
 
-    init(multiplier: Double, currency: NorgesBank.Currency, formatter: NumberFormatter = .currencyTextField) {
-        self.multiplier = multiplier
+    init(multiplier: Binding<Double>, currency: NorgesBank.Currency, formatter: NumberFormatter = .currencyTextField) {
+        _multiplier = multiplier
         self.currency = currency
         self.formatter = formatter
-        if let formattedValue = validateInitial(multiplier: multiplier){
+        if let formattedValue = validateInitial(multiplier: multiplier.wrappedValue){
             self.textField = formattedValue
         }
     }
@@ -43,7 +43,12 @@ class CurrencyInputFieldModel: ObservableObject {
         )
 
         if let formattedNumber = formatter.number(from: sanitizedInput) {
-            multiplier = formattedNumber.doubleValue
+
+            // Not nesesary to set multiplier with the same value.
+            // Doing so will only set it self, and you will never be able to write a comma
+            if multiplier != formattedNumber.doubleValue {
+                multiplier = formattedNumber.doubleValue
+            }
 
             // ⚠️ numbers like '100,' the comma will be formatted away,
             // we need some exceptions for decimal seperator

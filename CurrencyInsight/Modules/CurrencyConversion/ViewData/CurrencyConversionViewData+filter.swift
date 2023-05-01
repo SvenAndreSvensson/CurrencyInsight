@@ -5,7 +5,6 @@ extension CurrencyConversionViewData {
 
         return .init(
             baseCurrency: viewData.baseCurrency,
-            multiplier: viewData.multiplier,
             series: viewData.series.filter {
                 includedCurrencies.contains($0.baseCurrency)
             },

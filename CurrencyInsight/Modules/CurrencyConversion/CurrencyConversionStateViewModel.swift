@@ -5,6 +5,7 @@ class CurrencyConversionStateViewModel: ObservableObject {
     @Published var configuration: CurrencyConversionConfig
     @Published var showingCurrencySelection: Bool
 
+    // Used to check if it is nesesary to do a update
     private var previousRequestConfiguration: CurrencyConversionConfig?
     private let client: NorgesBank.ExchangeRatesClient
 
@@ -104,7 +105,6 @@ class CurrencyConversionStateViewModel: ObservableObject {
             // Add metadata about the request and online status
             let viewDataWithMeta = CurrencyConversionViewData(
                 baseCurrency: viewDataSorted.baseCurrency,
-                multiplier: viewDataSorted.multiplier,
                 series: viewDataSorted.series,
                 meta: .init(prepared: viewDataSorted.meta.prepared, message: metaMessage),
                 missingSeriesCurrencies: viewDataSorted.missingSeriesCurrencies
@@ -195,11 +195,5 @@ extension CurrencyConversionStateViewModel: CurrencyConversionActions {
         Task {
             await fetchExchangeRates(withFetchingState: false)
         }
-    }
-
-    func update(multiplier: Double) {
-        // save it, then it can be used on refrech.
-        // the same amount in text field as whene you start pulling
-        CurrencyConversionConfig.save(config: configuration)
     }
 }

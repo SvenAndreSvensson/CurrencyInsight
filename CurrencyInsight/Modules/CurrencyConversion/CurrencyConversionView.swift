@@ -1,37 +1,18 @@
 import SwiftUI
 
 protocol CurrencyConversionActions {
-    func update(multiplier: Double)
     func update(baseCurrency: NorgesBank.Currency)
 }
 
 struct CurrencyConversionView: View {
     let viewData: CurrencyConversionViewData
     var actions: CurrencyConversionActions?
-
-    @State private var multiplier: Double = 0
+    @AppStorage("CurrencyConversionView.multiplier") private var multiplier: Double = 1.0
     @FocusState private var isInputActive: Bool
 
     init(viewData: CurrencyConversionViewData, actions: CurrencyConversionActions? = nil) {
         self.viewData = viewData
         self.actions = actions
-        _multiplier = State(initialValue: viewData.multiplier)
-    }
-
-    func calculateQuoteValue(serie: ExchangeRateSerie) -> String {
-        if serie.LastObservation.value == 0 {
-            return "0"
-        }
-        if multiplier == 0 {
-            return "0"
-        }
-        let newValue =  multiplier * serie.LastObservation.value
-        let formatter = NumberFormatter.currencyText
-
-        if let formatted = formatter.string(from: NSDecimalNumber(floatLiteral: newValue)) {
-            return formatted
-        }
-        return formatter.notANumberSymbol
     }
 
     var body: some View {
@@ -100,11 +81,7 @@ struct CurrencyConversionView: View {
     }
 
     var baseCurrencyInputField: some View {
-        CurrencyInputField(viewModel: .init(multiplier: multiplier, currency: viewData.baseCurrency)) {
-            newMultiplier in
-                actions?.update(multiplier: newMultiplier)
-                multiplier = newMultiplier
-        }
+        CurrencyInputField(viewModel: .init(multiplier: $multiplier, currency: viewData.baseCurrency) )
         .card(withShadow: true, topLeft: 0, topRight: 0)
         .focused($isInputActive)
         .toolbar {
@@ -168,7 +145,8 @@ struct CurrencyConversionView: View {
                         .foregroundColor(.secondary)
 
                     Spacer()
-                    Text(calculateQuoteValue(serie: serie))
+//                    Text(viewModel.calculateQuoteValue(serie: serie))
+                    Text(serie.calculateQuoteValue(multiplier: multiplier))
                     Text(serie.quoteCurrency.symbol)
                         .foregroundColor(.secondary)
                 }

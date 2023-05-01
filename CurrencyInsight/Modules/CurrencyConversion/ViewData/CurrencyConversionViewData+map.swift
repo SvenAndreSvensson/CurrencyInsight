@@ -173,7 +173,6 @@ extension CurrencyConversionViewData {
 
         return CurrencyConversionViewData(
             baseCurrency: configuration.baseCurrency,
-            multiplier: configuration.multiplier,
             series: series,
             meta: .init(prepared:  dto.meta.prepared, message: ""),
             missingSeriesCurrencies: []

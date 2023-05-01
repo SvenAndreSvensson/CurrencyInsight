@@ -8,22 +8,19 @@ struct CurrencyConversionConfig: Codable {
     var selectedCurrencies: [NorgesBank.Currency]
     var excludedCurrencies: [NorgesBank.Currency]
     var baseCurrency: NorgesBank.Currency
-    var multiplier: Double
 
     init(
         frequency: NorgesBank.SeriesFrequency = .defaultFrequency,
         interval: DateInterval = .defaultInterval,
         selectedCurrencies: [NorgesBank.Currency] = [],
         excludedCurrencies: [NorgesBank.Currency] = [],
-        baseCurrency: NorgesBank.Currency = .NOK,
-        multiplier: Double = 1
+        baseCurrency: NorgesBank.Currency = .NOK
     ) {
         self.frequency = frequency
         self.interval = interval
         self.selectedCurrencies = selectedCurrencies
         self.excludedCurrencies = excludedCurrencies
         self.baseCurrency = baseCurrency
-        self.multiplier = multiplier
     }
 }
 
@@ -59,6 +56,17 @@ extension CurrencyConversionConfig {
 }
 
 extension CurrencyConversionConfig {
+
+    static func save(config: Self, multiplier: Double) {
+        let newConfig: Self = .init(
+            frequency: config.frequency,
+            interval: config.interval,
+            selectedCurrencies: config.selectedCurrencies,
+            excludedCurrencies: config.excludedCurrencies,
+            baseCurrency: config.baseCurrency
+        )
+        Self.save(config: newConfig)
+    }
 
     static func save(config: Self) {
         do {

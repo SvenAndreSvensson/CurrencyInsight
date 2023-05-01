@@ -2,7 +2,6 @@ import Foundation
 
 struct CurrencyConversionViewData {
     let baseCurrency: NorgesBank.Currency
-    var multiplier: Double
     let series: [ExchangeRateSerie]
     let meta: CurrencyConversionMeta
     let missingSeriesCurrencies: [NorgesBank.Currency]
@@ -45,6 +44,22 @@ extension ExchangeRateSerie {
     var LastObservation: ExchangeRateObservation {
         return quoteObservations.last ?? .init(id: 0, value: 0, valueAsString: "nil", key: "nil", start: Date.now, end: Date.now)
     }
+
+    func calculateQuoteValue(multiplier: Double, formatter: NumberFormatter = .currencyText) -> String {
+        if self.LastObservation.value == 0 {
+            return "0"
+        }
+        if multiplier == 0 {
+            return "0"
+        }
+        let newValue =  multiplier * self.LastObservation.value
+        let formatter = NumberFormatter.currencyText
+
+        if let formatted = formatter.string(from: NSDecimalNumber(floatLiteral: newValue)) {
+            return formatted
+        }
+        return formatter.notANumberSymbol
+    }
 }
 
 struct ExchangeRateObservation: Identifiable, Hashable {
@@ -64,7 +79,6 @@ extension CurrencyConversionViewData {
     static func previewValues(msg: String = "Error" ) -> Self {
         .init(
             baseCurrency: .NOK,
-            multiplier: 1,
             series: [],
             meta: .init(prepared: Date(), message: ""),
             missingSeriesCurrencies: []
