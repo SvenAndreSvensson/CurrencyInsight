@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 class CurrencyConversionStateViewModel: ObservableObject {
     @Published var state: State
     @Published var configuration: CurrencyConversionConfig
@@ -30,31 +29,31 @@ class CurrencyConversionStateViewModel: ObservableObject {
         var dto: NorgesBank.ExchangeRatesResponse?
         var metaMessage: String = ""
 
-        do {
-            if !CurrencyConversionConfig.hasSavedConfiguration && configuration.selectedCurrencies.count == 0 {
-                // setup defaults
-                configuration.selectedCurrencies = [.NOK, .SEK, .DKK, .ISK, .GBP, .EUR, .USD]
-            }
+        if !CurrencyConversionConfig.hasSavedConfiguration && configuration.selectedCurrencies.isEmpty {
+            // Add default currencies for first-time app usage
+            configuration.selectedCurrencies = [.NOK, .SEK, .DKK, .ISK, .GBP, .EUR, .USD]
+        }
 
-            // Important:
-            // getting data for all currencies, makes it possible to use app without the internet
+        do {
+            // Fetch data for all currencies to enable offline usage
             dto = try await client.getOneOfAllExchangeRates()
             saveLastDTO(dto: dto)
             metaMessage = ""
 
         } catch {
-            print("❌ Caught an unexpected error: \(error)")
+            print("❌ Unexpected error: \(error)")
+
             if let latestDTO = loadLastDTO() {
-                // Present the latestResult
+                // Load data from the latest result
                 dto = latestDTO
-                metaMessage = "Not online, data from previous result"
+                metaMessage = "Offline, using previous result"
             } else if let backupDTO = loadBackupDTO() {
-                // Present the backupResult
+                // Load data from fixture backup
                 dto = backupDTO
-                metaMessage = "Not online - No previous result - data from fixture backup"
+                metaMessage = "Offline - No previous result - Using fixture backup"
             } else {
-                // Handle the case when no data is available
-                print("❌ we have a PROBLEM Huston!")
+                // Handle case when no data is available
+                print("❌ Houston, we have a problem!")
                 state = .failed(viewData: .init(message: "Please try again later."))
                 return
             }
@@ -68,7 +67,7 @@ class CurrencyConversionStateViewModel: ObservableObject {
                     configuration: configuration
                 )
             else {
-                state = .failed(viewData: .init( message: "Faild mapping response, Please try again later."))
+                state = .failed(viewData: .init(message: "Failed mapping response. Please try again later."))
                 return
             }
 
@@ -78,8 +77,7 @@ class CurrencyConversionStateViewModel: ObservableObject {
             }
 
             // VALIDATE DATA
-            // ⚠️ TODO: add comments for what this does
-            // Check that we have serie data for the
+            // TODO: Add comments explaining the validation process
             if !viewData.missingSeriesCurrencies.isEmpty {
                 configuration.excludedCurrencies = viewData.missingSeriesCurrencies
                 if viewData.missingSeriesCurrencies.contains(viewData.baseCurrency) {
@@ -87,27 +85,24 @@ class CurrencyConversionStateViewModel: ObservableObject {
                 }
                 CurrencyConversionConfig.save(config: configuration)
             }
-            // Filter
-            let filtteredViewData = try CurrencyConversionViewData.filter(
+
+            // Filter, swap, and sort view data
+            let filteredViewData = try CurrencyConversionViewData.filter(
                 viewData: viewData,
                 includedCurrencies: configuration.requiredCurrenciesForPresentation
             )
-
-            // switch base and qoute. NOK is quote for all currency pairs
             let swappedViewData = try CurrencyConversionViewData.swapBaseAndQuote(
-                viewData: filtteredViewData,
+                viewData: filteredViewData,
                 baseCurrency: configuration.baseCurrency,
                 selectedCurrencies: configuration.selectedCurrencies
             )
-
-            // Sort
             let viewDataSorted = try CurrencyConversionViewData.sortSeries(
                 viewData: swappedViewData,
                 sortOrder: configuration.selectedCurrencies
             )
 
-            // Add meta about when data is requested and if online or not
-            let viewDatawithMeta = CurrencyConversionViewData(
+            // Add metadata about the request and online status
+            let viewDataWithMeta = CurrencyConversionViewData(
                 baseCurrency: viewDataSorted.baseCurrency,
                 multiplier: viewDataSorted.multiplier,
                 series: viewDataSorted.series,
@@ -115,13 +110,11 @@ class CurrencyConversionStateViewModel: ObservableObject {
                 missingSeriesCurrencies: viewDataSorted.missingSeriesCurrencies
             )
 
-            state = .dataLoaded(viewData: viewDatawithMeta)
+            state = .dataLoaded(viewData: viewDataWithMeta)
             previousRequestConfiguration = configuration
 
-        }
-        catch let ExchangeError.missingSerieData(currency) {
-            print(
-                "❌ Unexpected error?, " +
+        } catch let ExchangeError.missingSerieData(currency) {
+            print("❌ Unexpected error: missing series" +
                 "the serie for the new base should and must exist: \(currency.code)"
             )
 
@@ -210,4 +203,3 @@ extension CurrencyConversionStateViewModel: CurrencyConversionActions {
         CurrencyConversionConfig.save(config: configuration)
     }
 }
-
